@@ -8,8 +8,8 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
 import UserDashboard from '../../components/userDashboard';
-import PredictDecease from "./Diagnose";
 import Chatbot from '../../components/chatbot';
+import Learning from '../../components/Learning';
 
 function UserPage(){
 
@@ -33,6 +33,10 @@ function UserPage(){
 
     const handleChatbotClick = () => {
         setActive("Chatbot");
+    }
+
+    const handleLearningClick = () => {
+        setActive("Learning");
     }
 
     return(
@@ -67,6 +71,17 @@ function UserPage(){
                                     </Button>
                                 </Card.Text>
 
+                                <Card.Text>
+                                    <Button
+                                        variant="link"
+                                        className="text-white"
+                                        style={{ textDecoration: 'none', fontWeight: 'normal' }}
+                                        onClick={handleLearningClick}
+                                    >
+                                        Learning
+                                    </Button>
+                                </Card.Text>
+
                                 {/* Section 3 */}
                                 <Card.Text>
                                     <Button
@@ -93,6 +108,12 @@ function UserPage(){
                             <div style={{ maxWidth: '100%', overflowX: 'auto' }}>
                                 {/* Apply styles to limit width and handle overflow */}
                                 <Chatbot/>
+                            </div>
+                        )}
+                        {active === 'Learning' && (
+                            <div style={{ maxWidth: '100%', overflowX: 'auto' }}>
+                                {/* Apply styles to limit width and handle overflow */}
+                                <Learning/>
                             </div>
                         )}
                     </Col>
