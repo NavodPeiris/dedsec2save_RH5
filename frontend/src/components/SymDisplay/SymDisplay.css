@@ -1,0 +1,41 @@
+.symdisplay-container {
+  width: 100%;
+  margin-top: 3rem;
+  padding-bottom:3rem ;
+  min-height: 10vh;
+  background-color: #3b3b3b;
+  color: #34e1ea;
+}
+
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+.heading-text {
+  font-weight: 100;
+  font-size: 1.45rem;
+}
+
+.value-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1rem;
+  width: 95%;
+  padding-left: 2.1%;
+}
+
+.table-container {
+  width: 80%;
+  padding-left: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+  .heading-text {
+    font-weight: 100;
+    font-size: 1rem;
+  }
+}
