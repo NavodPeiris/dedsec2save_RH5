@@ -145,13 +145,14 @@ function UserForm() {
         <Modal.Header closeButton>
           <Modal.Title>Predictions and Precautions</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="text-center">
             <h3>Predicted Decease: {decease}</h3>
-            <h3>Precautions: </h3>
-            <h4>{treatments[0]}</h4>
-            <h4>{treatments[1]}</h4>
-            <h4>{treatments[2]}</h4>
-            <h4>{treatments[3]}</h4>
+            <h3>Precautions:</h3>
+            <ul style={{ listStyleType: 'none', padding: 0 }}>
+                {treatments.map((precaution, index) => (
+                    <li key={index}>{precaution}</li>
+                ))}
+            </ul>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>

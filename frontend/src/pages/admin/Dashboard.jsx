@@ -14,6 +14,7 @@ import DashboardContent from "../../components/DashboardContent";
 import { useState} from "react";
 import { useNavigate } from 'react-router-dom';
 import TableComponent from "../../components/TableComponent";
+import Learning from "../../components/Learning";
 
 function Dashboard(){
    
@@ -25,8 +26,8 @@ function Dashboard(){
         setActive("Dashboard")
     }
 
-    const handlePeopleClick = () => {
-        setActive("People")
+    const handleLearningClick = () => {
+        setActive("Learning")
     }
 
     const handleLogoutClick = () => {
@@ -68,9 +69,9 @@ function Dashboard(){
                     variant="link"
                     className="text-white"
                     style={{ textDecoration: 'none', fontWeight: 'normal' }}
-                    onClick={handlePeopleClick}
+                    onClick={handleLearningClick}
                   >
-                    People
+                    Learning
                   </Button>
                 </Card.Text>
 
@@ -100,10 +101,10 @@ function Dashboard(){
                 <DashboardContent/>
               </div>
             )}
-            {active === 'People' && (
+            {active === 'Learning' && (
               <div>
                 {/* People content goes here */}
-                <TableComponent/>
+                <Learning/>
               </div>
             )}
 

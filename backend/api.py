@@ -42,7 +42,7 @@ ACCESS_TOKEN_EXPIRE_WEEKS = 2
 
 # pass123 for localhost
 # pass1234 for AWS RDS
-connection = mysql.connector.connect(user="root", password="pass123", host="localhost", port="3306", database="test")
+connection = mysql.connector.connect(user="root", password="pass1234", host="test.czciuecec3mk.us-east-1.rds.amazonaws.com", port="3306", database="test")
 
 async def read_users():
     cursor = connection.cursor()
